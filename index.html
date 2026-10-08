@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Resultados | Instituto Lumière</title>
+<meta name="description" content="Antes e depois de pacientes do Instituto Lumière, para apresentar na avaliação.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#151a3a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Resultados">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="assets/brand/vetor-simbolo-rosa.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+
+<!-- ícones de interface -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shrink" viewBox="0 0 24 24"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6.5h14M5 11h14M5 15.5h9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- ======================= COMPARADOR ======================= -->
+<main class="view" aria-label="Resultados: antes e depois">
+  <header class="bar">
+    <img class="bar-logo" src="assets/brand/vetor-lockup-horizontal-branco.svg" alt="Instituto Lumière" width="168" height="48">
+    <div class="bar-count"><b id="vNum">01</b><span>/ <span id="vTotal">08</span></span></div>
+    <div class="bar-actions">
+      <button class="icon-btn" type="button" id="textBtn" aria-label="Mostrar ou ocultar o texto do caso" aria-pressed="true"><svg><use href="#i-text"/></svg></button>
+      <button class="icon-btn fs-btn" type="button" aria-label="Tela cheia"><svg><use href="#i-expand"/></svg></button>
+    </div>
+  </header>
+
+  <div class="viewer">
+    <div class="stage" id="stage">
+      <div class="ba" id="ba" tabindex="0" role="slider" aria-label="Arraste para comparar o antes e o depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img class="ba-after" alt="Depois do tratamento" draggable="false">
+        <div class="ba-before"><img alt="Antes do tratamento" draggable="false"></div>
+        <span class="ba-label l">Antes</span><span class="ba-label r">Depois</span>
+        <span class="ba-line"></span>
+        <span class="ba-knob"><svg><use href="#i-drag"/></svg></span>
+      </div>
+    </div>
+
+    <aside class="info" id="info">
+      <div class="info-inner" id="infoInner">
+        <span class="tag" id="vTag"></span>
+        <h1 id="vTitle"></h1>
+        <p id="vText"></p>
+      </div>
+      <p class="legal">Paciente do Instituto, imagem usada com autorização. Cada caso é único e o resultado varia de pessoa para pessoa.<br>Dra. Evelin E. Binder · CRO/SC 26040</p>
+    </aside>
+
+    <nav class="controls" aria-label="Navegação dos casos">
+      <button class="round-btn" type="button" id="prevBtn" aria-label="Caso anterior"><svg><use href="#i-left"/></svg></button>
+      <div class="seg" role="group" aria-label="Posição do comparador">
+        <button type="button" data-pos="100">Antes</button>
+        <button type="button" data-pos="50" class="on">Comparar</button>
+        <button type="button" data-pos="0">Depois</button>
+      </div>
+      <button class="round-btn" type="button" id="nextBtn" aria-label="Próximo caso"><svg><use href="#i-right"/></svg></button>
+    </nav>
+
+    <div class="thumbs" id="thumbs" role="tablist" aria-label="Todos os casos"></div>
+  </div>
+</main>
+
+<script src="assets/js/app.js?v=1"></script>
+</body>
+</html>
