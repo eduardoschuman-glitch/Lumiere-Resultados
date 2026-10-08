@@ -44,14 +44,14 @@
     { id: 'caso-03', tag: 'Facetas', title: 'Dentes fraturados, sorriso inteiro.',
       text: 'Os dentes da frente, fraturados e desgastados, foram restaurados com facetas. Forma e cor devolvidas com precisão.',
       views: [{ src: 'caso-03', w: 1200, h: 600 }, { src: 'caso-03-2', w: 1200, h: 458 }] },
-    { id: 'caso-08', tag: 'Facetas', title: 'Mais claro, com a cara dele.',
-      text: 'Dentes amarelados e com desgaste receberam facetas com cor e formato planejados para o rosto do paciente. Um sorriso mais claro, sem perder a naturalidade.',
+    { id: 'caso-08', tag: 'Facetas', title: 'Mais uniforme, com a cara dele.',
+      text: 'Facetas com cor, forma e tamanho planejados para o rosto do paciente deixaram o sorriso mais uniforme e harmônico, sem perder a naturalidade.',
       views: [{ src: 'caso-08', w: 1200, h: 639 }, { src: 'caso-08-2', w: 1200, h: 644 }] },
     { id: 'caso-09', tag: 'Facetas', title: 'Forma e proporção refeitas.',
       text: 'Os dentes da frente ganharam facetas com forma e tamanho redesenhados, deixando o sorriso mais uniforme e equilibrado.',
       views: [{ src: 'caso-09', w: 1200, h: 660 }] }
   ];
-  const img = (v, lado) => `assets/img/${v.src}-${lado}.webp?v=3`;
+  const img = (v, lado) => `assets/img/${v.src}-${lado}.webp?v=4`;
 
   const ba = $('#ba');
   const stage = $('#stage');
