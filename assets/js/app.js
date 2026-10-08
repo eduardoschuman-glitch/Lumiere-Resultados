@@ -21,14 +21,14 @@
       text: 'Dentes comprometidos que vinham sendo remendados por anos. A prótese protocolo trouxe estabilidade e devolveu o prazer de comer sem preocupação.' },
     { id: 'caso-07', w: 1200, h: 600, tag: 'Prótese protocolo', title: 'Luz no sorriso, leveza na rotina.',
       text: 'Dentes escurecidos e com perdas foram substituídos por uma arcada fixa sobre implantes. Um sorriso claro, proporcional e seguro para o dia a dia.' },
-    { id: 'caso-10', w: 1200, h: 900, tag: 'Reabilitação do sorriso', title: 'O mesmo sorriso, mais confiante.',
+    { id: 'caso-10', w: 1200, h: 720, tag: 'Reabilitação do sorriso', title: 'O mesmo sorriso, mais confiante.',
       text: 'Com cor, forma e alinhamento planejados para o rosto da paciente, a reabilitação deixou o sorriso mais harmônico sem perder a naturalidade.' },
     { id: 'caso-02', w: 1200, h: 545, tag: 'Facetas e coroas', title: 'Proporção e harmonia.',
       text: 'Espaços, diferenças de tamanho e desgastes corrigidos com facetas e coroas. Detalhe por detalhe, para um resultado equilibrado e natural.' },
     { id: 'caso-03', w: 1200, h: 600, tag: 'Facetas', title: 'Dentes fraturados, sorriso inteiro.',
       text: 'Os dentes da frente, fraturados e desgastados, foram restaurados com facetas. Forma e cor devolvidas com precisão.' }
   ];
-  const img = (c, lado) => `assets/img/${c.id}-${lado}.webp`;
+  const img = (c, lado) => `assets/img/${c.id}-${lado}.webp?v=2`;
 
   const ba = $('#ba');
   const stage = $('#stage');

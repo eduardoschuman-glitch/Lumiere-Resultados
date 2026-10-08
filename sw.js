@@ -1,38 +1,38 @@
 /* Instituto Lumière · Resultados
    Guarda a página e as fotos no aparelho para abrir mesmo sem internet.
-   Ao trocar ou incluir fotos, aumente o número da versão abaixo e
-   acrescente os arquivos novos na lista. */
-const VERSION = 'resultados-v1';
+   Ao trocar ou incluir fotos, aumente o número da versão abaixo,
+   o ?v= das fotos em assets/js/app.js e acrescente os arquivos novos na lista. */
+const VERSION = 'resultados-v2';
 const FILES = [
   './',
   'index.html',
   'manifest.webmanifest',
   'assets/css/style.css?v=1',
-  'assets/js/app.js?v=1',
+  'assets/js/app.js?v=2',
   'assets/brand/vetor-lockup-horizontal-branco.svg',
   'assets/brand/vetor-simbolo-rosa.svg',
   'icons/apple-touch-icon.png',
   'icons/icon-192.png',
-  'assets/img/caso-01-antes.webp',
-  'assets/img/caso-01-depois.webp',
-  'assets/img/caso-02-antes.webp',
-  'assets/img/caso-02-depois.webp',
-  'assets/img/caso-03-antes.webp',
-  'assets/img/caso-03-depois.webp',
-  'assets/img/caso-04-antes.webp',
-  'assets/img/caso-04-depois.webp',
-  'assets/img/caso-06-antes.webp',
-  'assets/img/caso-06-depois.webp',
-  'assets/img/caso-07-antes.webp',
-  'assets/img/caso-07-depois.webp',
-  'assets/img/caso-10-antes.webp',
-  'assets/img/caso-10-depois.webp',
-  'assets/img/caso-11-antes.webp',
-  'assets/img/caso-11-depois.webp'
+  'assets/img/caso-01-antes.webp?v=2',
+  'assets/img/caso-01-depois.webp?v=2',
+  'assets/img/caso-02-antes.webp?v=2',
+  'assets/img/caso-02-depois.webp?v=2',
+  'assets/img/caso-03-antes.webp?v=2',
+  'assets/img/caso-03-depois.webp?v=2',
+  'assets/img/caso-04-antes.webp?v=2',
+  'assets/img/caso-04-depois.webp?v=2',
+  'assets/img/caso-06-antes.webp?v=2',
+  'assets/img/caso-06-depois.webp?v=2',
+  'assets/img/caso-07-antes.webp?v=2',
+  'assets/img/caso-07-depois.webp?v=2',
+  'assets/img/caso-10-antes.webp?v=2',
+  'assets/img/caso-10-depois.webp?v=2',
+  'assets/img/caso-11-antes.webp?v=2',
+  'assets/img/caso-11-depois.webp?v=2'
 ];
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', e => {

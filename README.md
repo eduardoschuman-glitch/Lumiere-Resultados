@@ -17,7 +17,8 @@ Página de antes e depois do Instituto Lumière (Mafra/SC), feita para a equipe 
 
 1. Salve as duas fotos, com o mesmo tamanho e enquadramento, em `assets/img` como `caso-XX-antes.webp` e `caso-XX-depois.webp` (largura de 1200 px).
 2. Acrescente o caso na lista `CASES`, no começo de `assets/js/app.js`, com tipo de tratamento, título e texto.
-3. Em `sw.js`, aumente a versão (`resultados-v2`) e acrescente as duas fotos na lista.
+3. Ao trocar uma foto que já existe, aumente o `?v=` na função `img` de `assets/js/app.js`, para os aparelhos baixarem a nova.
+4. Em `sw.js`, aumente a versão (`resultados-v3`, e assim por diante) e acrescente as fotos novas na lista, com o mesmo `?v=`.
 
 Só entram fotos de pacientes que assinaram o termo de autorização de imagem.
 
