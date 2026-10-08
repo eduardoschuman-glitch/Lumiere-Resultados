@@ -51,7 +51,7 @@
       text: 'Os dentes da frente ganharam facetas com forma e tamanho redesenhados, deixando o sorriso mais uniforme e equilibrado.',
       views: [{ src: 'caso-09', w: 1200, h: 660 }] }
   ];
-  const img = (v, lado) => `assets/img/${v.src}-${lado}.webp?v=5`;
+  const img = (v, lado) => `assets/img/${v.src}-${lado}.webp?v=6`;
 
   const ba = $('#ba');
   const stage = $('#stage');
